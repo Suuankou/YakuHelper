@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="module" src="/src/main.ts"></script>
+        <title>Yakuhelper Demo</title>
+    </head>
+
+    <body class="min-h-full bg-ivory">
+        <header>
+            <nav class="flex items-center bg-casino-light text-ivory">
+                <div class="text-3xl p-3 font-bold color-ivory font-cormorant"
+                     id="Header-Title">
+                    <h1>
+                        <a href="/"
+                           hx-get="/"
+                           hx-target="#main-section"
+                           hx-push-url="/"
+                           class="cursor-pointer">
+                            Yakuhelper
+                        </a>
+                    </h1>
+                    <ul class="ml-auto flex items-center gap-6 p-3">
+                        <li>
+                            <a href="/Yaku"
+                               hx-get="/Yaku"
+                               hx-target="#main-section"
+                               hx-push-url="/Yaku"
+                               class="cursor-pointer hover:text-blue-400">
+                                Yaku List
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/Practice"
+                               hx-get="/Practice"
+                               hx-target="#main-section"
+                               hx-push-url="/Practice"
+                               class="cursor-pointer hover:text-blue-400">
+                                Practice
+                            </a>
+                        </li>
+                    </ul>
+            </nav>
+        </header>
+        <hr class="h-px border-ivory-muted border-5">
+        <main class="mx-auto max-w-6xl px-6 py-16">
+            <h1 class="text-3xl font-bold tracking-tight">
+                役helper
+            </h1>
+
+            <section class="mt-10 rounded-xl border border-gray-200 bg-white p-6 shadow-sm"
+                     id="main-section">
+                <h2 class="text-lg font-semibold text-charcoal">
+                    Welcome to Yakuhelper
+                </h2>
+
+                <p class="mt-2 text-sm text-gray-500">
+                    Dummy-text for now! Click below to generate a Hand of tiles, or all Yaku tiles.
+                </p>
+
+                <button
+                    id="load-hand"
+                    class="mt-5 rounded-lg px-4 py-2 font-medium text-white transition bg-vintage-blue"
+                >
+                    HAND
+                </button>
+                <button
+                    id="load-wall"
+                    class="mt-5 rounded-lg  px-4 py-2 font-medium text-white transition bg-vintage-red"
+                >
+                    WALL
+                </button>
+                <div
+                    id="content"
+                    class="mt-6 rounded-lg border border-dashed border-gray-300 p-5 position: fixed;"
+                >
+                    <p class="text-sm text-gray-400">
+                        手牌が空です
+                    </p>
+                </div>
+                <div
+                    id="content-hand"
+                    class="mt-6 rounded-lg border border-dashed border-gray-300 p-5">
+                    <p class="text-sm text-gray-400">
+                        h a n d
+                    </p>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-casino: #103d30;
+  --color-casino-light: #174f3d;
+  --color-casino-hover: #286b50;
+
+  --color-gold: #c5a66b;
+  --color-gold-light: #c6a664;
+  --color-ivory: #f0e9d8;
+  --color-ivory-muted: #c8c0ad;
+  --color-sage: #a9bdb0;
+  --color-wood: #382b23;
+  --color-beige1: #efe9d8;
+  --color-beige2: #f4eddd;
+
+--color-vintage-blue: #315c78;
+--color-vintage-blue-hover: #416f8d;
+
+--color-vintage-red: #a33e42;
+--color-vintage-red-hover: #b94d51;
+
+--color-charcoal: #252c28;
+--color-warm-gray: #686d68;
+--color-stone: #a09d91;
+
+--font-cormorant: "Cormorant Garamond", serif;
+}
