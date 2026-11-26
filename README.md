@@ -49,3 +49,12 @@ The tile graphics used in Yakuhelp originate from this project.
 ## Status
 
 Work in progress.
+
+
+## Plan
+- Lib to be released on NPM
+- Yaku List
+- Wait guesser
+- Yaku guesser
+- Riichi game implementation
+More to come!
