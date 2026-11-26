@@ -17,6 +17,8 @@ export class TileActions{
         }
         return arr;
     }
+
+    // Initial first hand. Used to draw first 13 tiles. 
     static delegateHand<T>(arr: T[]): T[]{
             const MAX_HAND = 13;
             const TEMP_HAND: string[] = [];
@@ -33,19 +35,31 @@ export class TileActions{
     arr.push();
     }
 
+    // Bubble Sort
     static bubbleSort<T>(arr: T[]):[]{
         const LEN: number = arr.length;
         for(let i=0; i<=LEN; i++){
                 console.log(`i: ${i}`);
             for(let j=i+1; j<=LEN; j++){
-                console.log(`___j: ${i}`);
+                console.log(`j: ${i}`);
             const HIGH: number = 0;
             if(arr[i] > arr[j]){
                 [arr[i], arr[j]] = [arr[j], arr[i]];
-                console.log(`array: ${arr[j]}`);
+                console.log(`i higher than j: ${arr[j]}`);
             }
         }
         }
         return arr;
+    }
+
+    // Tile sorting by numerical and letter
+    static sortByNotation<T extends { notation: string }>(hand: T[]): T[] {
+        hand.sort((a, b) => {
+            const typeA = a.notation.replace(/[0-9]/g, "");
+            const typeB = b.notation.replace(/[0-9]/g, "");
+            return typeA.localeCompare(typeB) ||
+                parseInt(a.notation) - parseInt(b.notation);
+        });
+        return hand;
     }
 }

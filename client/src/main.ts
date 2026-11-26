@@ -14,16 +14,9 @@ button?.addEventListener("click", async () => {
     const tiles = generator.generate();
     TileActions.shuffle(tiles, true);
     const hand1 = TileActions.delegateHand(tiles);
-    //const hand2 = TileActions.delegateHand(tiles);
-    //const hand3 = TileActions.delegateHand(tiles);
-    //const hand4 = TileActions.delegateHand(tiles);
-    console.table(hand1);
-    console.table(`Your hand: ${hand1}`);
+    TileActions.sortByNotation(hand1);
     content_hand!.innerHTML = await renderWall(hand1);
     content!.innerHTML = await renderWall(tiles);
-    console.log(TileActions.bubbleSort(hand1));
+    console.table(hand1);
 });
-
-const TA_EVEN: number[] = [5, 2, 6, 3, 1, 9, 53, 13];
-console.log(TileActions.bubbleSort(TA_EVEN));
 
