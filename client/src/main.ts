@@ -23,3 +23,5 @@ button?.addEventListener("click", async () => {
     content!.innerHTML = await renderWall(tiles);
 });
 
+const TA: number[] = [5, 2, 9, 6, 13];
+TileActions.mSort(TA);
