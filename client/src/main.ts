@@ -23,5 +23,9 @@ button?.addEventListener("click", async () => {
     content!.innerHTML = await renderWall(tiles);
 });
 
-const TA: number[] = [5, 2, 9, 6, 13];
-TileActions.mSort(TA);
+const TA_EVEN: number[] = [5, 2, 6, 13];
+const TA_ODD1: number[] = [5, 2, 9, 6, 13];
+const TA_ODD2: number[] = [2,5,21, 45, 3, 8, 66, 19, 32, 96, 940, 52, 2, 76, 69, 2, 9, 6, 13];
+//TileActions.mSort(TA_ODD1);
+TileActions.mSort(TA_ODD2);
+TileActions.mSort(TA_EVEN);

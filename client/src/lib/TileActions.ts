@@ -42,31 +42,44 @@ export class TileActions{
         const n2:number = r-q;
         */
 
+    // Some Magic Numbers for now 
+    // (Notation from "ITRODUCTION TO ALGORITHMS, THIRD EDITION", P.31, Merge Sort)
+    //
     static mSort<T>(arr: T[]): void{
-        const SORTED_ARR:number[] = [];
-        if(arr.length >= 2){
-        const LEN:number = Math.floor(arr.length);
-        const MID:number = Math.floor(LEN/2);
-        console.log(`MID NUM: ${MID}`);
-        // IF EVEN
-        if(LEN%2 !== 0){
-            console.log(`Array has an odd number of elements: mid index ${MID} arr[${MID-1}]`);
-            const SUB_1:number[] = [];
-            const SUB_2:number[] = [];
-            for(let i=0; i<= MID; i++){
-                console.log(`${i}`);
-                SUB_1.push(arr[i]);
+        // MERGE
+        const p:number = 0;
+        const r:number = arr.length;
+        const q:number = Math.floor(r/2);
+
+        const n1:number = q-p+1;
+        const n2:number = r-q;
+
+        const L: number[] = [];
+        const R: number[] = [];
+        const ARR_TEMP: number[] = [];
+
+        for(let i=0; i<n1; i++){
+            L.push(arr[p + i]);
             }
-            for(let i=(LEN-1); i > MID; i--){
-                console.log(`${i}`);
-                SUB_2.push(arr[i]);
+        for(let j=0; j<n2; j++){
+            R.push(arr[q + 1 - j]);
+           }
+            console.table(L);
+            console.table(R);
+        let i:number = 0;
+        let j:number = 0;
+        let k: number = 0;
+        while(i<n1 && j<n2){
+            if(L[i]<= R[j]){
+                ARR_TEMP[k] = L[i]
+                i++
             }
-            console.table(SUB_1);
-            console.table(SUB_2);
+            else{
+                ARR_TEMP[k] = R[j];
+                j++;
+            }
+            k++;
         }
-     }
-     else{
-        console.log(``);
-     }
-    }
+        
+}
 }
