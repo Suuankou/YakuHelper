@@ -1,5 +1,6 @@
 import 'htmx.org'
 import './style.css'
+
 import {TileGenerator} from "./lib/TileGenerator.ts"
 import {TileActions} from "./lib/TileActions.ts"
 import {renderWall} from './views/wall.ts'
@@ -13,5 +14,8 @@ button?.addEventListener("click", async () => {
     const tiles = generator.generate();
     TileActions.shuffle(tiles, true);
     content!.innerHTML = await renderWall(tiles);
+    const hand = TileActions.delegateHand(tiles);
+    console.table(hand);
+    console.table(`Your hand: ${hand}`);
 });
 
