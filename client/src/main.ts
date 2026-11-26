@@ -13,9 +13,13 @@ const content = document.querySelector<HTMLElement>("#content")
 button?.addEventListener("click", async () => {
     const tiles = generator.generate();
     TileActions.shuffle(tiles, true);
+    const hand1 = TileActions.delegateHand(tiles);
+    //const hand2 = TileActions.delegateHand(tiles);
+    //const hand3 = TileActions.delegateHand(tiles);
+    //const hand4 = TileActions.delegateHand(tiles);
+    console.table(hand1);
+    console.table(`Your hand: ${hand1}`);
+    content_hand!.innerHTML = await renderWall(hand1);
     content!.innerHTML = await renderWall(tiles);
-    const hand = TileActions.delegateHand(tiles);
-    console.table(hand);
-    console.table(`Your hand: ${hand}`);
 });
 
