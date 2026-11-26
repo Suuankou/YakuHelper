@@ -42,7 +42,7 @@ export class TileActions{
         const n2:number = r-q;
         */
 
-    //  
+    //  Just a test. Wont be used for now. Later addition
     //  Comments -> (Notation from "ITRODUCTION TO ALGORITHMS, THIRD EDITION", P.31, Merge Sort)
     static mSort<T>(arr: T[]): void{
         // MERGE
@@ -70,5 +70,38 @@ export class TileActions{
             console.table(LEFT);
             console.table(RIGHT);
             console.table(arr);
+
+            let k:number = START;
+            let i:number = 0;
+            let j:number = 0;
+
+            while(i<n1 && j<n2){
+                if(LEFT[i] <= RIGHT[j]){
+                    arr[k] = LEFT[i];
+                    i++;
+                    console.log(`LEFT REMAINDER ${LEFT[i]}`);
+                }
+                else{
+                    arr[k] = RIGHT[j];
+                    j++;
+                    console.log(`RIGHT REMAINDER ${RIGHT[j]}`);
+                }
+                k++
+            }
+    }
+    static bubbleSort<T>(arr: T[]):[]{
+        const LEN: number = arr.length;
+        for(let i=0; i<=LEN; i++){
+                console.log(`i: ${i}`);
+            for(let j=i+1; j<=LEN; j++){
+                console.log(`___j: ${i}`);
+            const HIGH: number = 0;
+            if(arr[i] > arr[j]){
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+                console.log(`array: ${arr[j]}`);
+            }
+        }
+        }
+        return arr;
     }
 }

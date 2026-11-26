@@ -21,12 +21,9 @@ button?.addEventListener("click", async () => {
     console.table(`Your hand: ${hand1}`);
     content_hand!.innerHTML = await renderWall(hand1);
     content!.innerHTML = await renderWall(tiles);
+    console.log(TileActions.bubbleSort(hand1));
 });
 
-const TA_EVEN: number[] = [5, 2, 6, 13];
-const TA_ODD1: number[] = [5, 2, 9, 6, 13];
-const TA_ODD2: number[] = [2,5,21, 45, 3, 8, 66, 19, 32, 96, 940, 52, 2, 76, 69, 2, 9, 6, 13];
-//TileActions.mSort(TA_ODD1);
-//TileActions.mSort(TA_ODD2);
-TileActions.mSort(TA_EVEN);
-TileActions.mSort(TA_ODD1);
+const TA_EVEN: number[] = [5, 2, 6, 3, 1, 9, 53, 13];
+console.log(TileActions.bubbleSort(TA_EVEN));
+
