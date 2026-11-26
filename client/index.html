@@ -42,7 +42,7 @@
             </nav>
         </header>
         <hr class="h-px border-ivory-muted border-5">
-        <main class="mx-auto max-w-6xl px-6 py-16">
+        <main class="mx-auto max-w-8xl px-6 py-16">
             <h1 class="text-3xl font-bold tracking-tight">
                 役helper
             </h1>
@@ -56,32 +56,38 @@
                 <p class="mt-2 text-sm text-gray-500">
                     Dummy-text for now! Click below to generate a Hand of tiles, or all Yaku tiles.
                 </p>
-
+                <button
+                    id="load-wall"
+                    class="mt-5 rounded-lg  px-4 py-2 font-medium text-white transition bg-vintage-red"
+                >
+                    Start
+                </button>
+                <!--
                 <button
                     id="load-hand"
                     class="mt-5 rounded-lg px-4 py-2 font-medium text-white transition bg-vintage-blue"
                 >
                     HAND
                 </button>
-                <button
-                    id="load-wall"
-                    class="mt-5 rounded-lg  px-4 py-2 font-medium text-white transition bg-vintage-red"
-                >
-                    WALL
-                </button>
+                -->
+                <div>
+                <div
+                    id="content_hand"
+                    class="flex items-center justify-center  rounded-lg border border-dashed 
+                    mt-6 p-5 border-gray-300 bg-gray-500/5 ">
+                    <p class="text-sm text-gray-400">
+                    役
+                    </p>
+                </div>
+                </div>
+
+
                 <div
                     id="content"
-                    class="mt-6 rounded-lg border border-dashed border-gray-300 p-5 position: fixed;"
+                    class="flex items-center justify-center mt-6 rounded-lg border border-dashed border-gray-300 p-5 position: fixed;"
                 >
                     <p class="text-sm text-gray-400">
                     牌
-                    </p>
-                </div>
-                <div
-                    id="content-hand"
-                    class="mt-6 rounded-lg border border-dashed border-gray-300 p-5">
-                    <p class="text-sm text-gray-400">
-                    役
                     </p>
                 </div>
             </section>
